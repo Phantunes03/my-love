@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para o Amor da Minha Vida ❤️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Falling animations */
+        @keyframes falling {
+            0% {
+                transform: translateY(-10vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        .falling-heart, .falling-flower {
+            position: fixed;
+            top: 0;
+            z-index: 10;
+            pointer-events: none;
+            animation: falling linear infinite;
+        }
+        .dancing-script {
+            font-family: 'Dancing Script', cursive;
+        }
+        .poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        .heart-bg {
+            background: linear-gradient(135deg, #ff6b8b 0%, #ff8e9e 100%);
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .photo-card {
+            transition: all 0.3s ease;
+        }
+        .photo-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .video-container {
+            transition: all 0.3s ease;
+        }
+        .video-container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="heart-bg min-h-screen poppins text-white overflow-x-hidden">
+    <!-- Main Container -->
+    <div class="container mx-auto px-4 py-8 max-w-md">
+        <!-- Header with Floating Hearts -->
+        <header class="text-center mb-8">
+            <div class="floating inline-block">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-red-500 pulse" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+                </svg>
+            </div>
+            <h1 class="dancing-script text-4xl font-bold mt-4">Feliz Dia dos Namorados</h1>
+            <p class="text-xl mt-2">Para o amor da minha vida</p>
+        </header>
+
+        <!-- Main Message Card -->
+        <section class="bg-white bg-opacity-20 rounded-xl p-6 mb-8 backdrop-blur-sm shadow-lg">
+            <h2 class="dancing-script text-3xl font-bold mb-4">Minha Querida,</h2>
+            <p class="mb-4">No momento que você entrou na minha vida, tudo ficou mais bonito. Cada dia ao seu lado é um presente que eu agradeço.</p>
+            <p class="mb-4">Você é a razão do meu sorriso, o motivo do meu dia ser mais feliz. Eu te amo mais do que palavras podem expressar.</p>
+            <div class="text-center mt-8">
+                <button id="surpriseBtn" class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-full transition-all transform hover:scale-105">
+                    Clique para uma surpresa!
+                </button>
+            </div>
+        </section>
+
+        <!-- Countdown Timer -->
+        <section class="bg-white bg-opacity-20 rounded-xl p-6 mb-8 backdrop-blur-sm shadow-lg text-center">
+            <h3 class="dancing-script text-2xl font-bold mb-4">Nosso Tempo Juntos</h3>
+            <div class="grid grid-cols-4 gap-2 text-center">
+                <div class="bg-white bg-opacity-30 rounded-lg p-3">
+                    <div id="years" class="text-2xl font-bold">0</div>
+                    <div class="text-sm">Anos</div>
+                </div>
+                <div class="bg-white bg-opacity-30 rounded-lg p-3">
+                    <div id="months" class="text-2xl font-bold">0</div>
+                    <div class="text-sm">Meses</div>
+                </div>
+                <div class="bg-white bg-opacity-30 rounded-lg p-3">
+                    <div id="days" class="text-2xl font-bold">0</div>
+                    <div class="text-sm">Dias</div>
+                </div>
+                <div class="bg-white bg-opacity-30 rounded-lg p-3">
+                    <div id="hours" class="text-2xl font-bold">0</div>
+                    <div class="text-sm">Horas</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery -->
+        <section class="mb-8">
+            <h3 class="dancing-script text-2xl font-bold mb-4 text-center">Nossos Momentos</h3>
+            <div class="grid grid-cols-3 gap-4">
+                <!-- Photo 1 -->
+                <div class="photo-card rounded-xl overflow-hidden shadow-lg">
+                    <img src="WhatsApp Image 2025-06-04 at 23.39.35 (1).jpeg" alt="Couple photo 1" class="w-full h-40 object-cover">
+                </div>
+                <!-- Photo 2 -->
+                <div class="photo-card rounded-xl overflow-hidden shadow-lg">
+                    <img src="WhatsApp Image 2025-06-04 at 23.39.35.jpeg" alt="Couple photo 2" class="w-full h-40 object-cover">
+                </div>
+                <!-- Photo 3 -->
+                <div class="photo-card rounded-xl overflow-hidden shadow-lg">
+                    <img src="WhatsApp Image 2025-06-04 at 23.39.35 (2).jpeg" alt="Couple photo 3" class="w-full h-40 object-cover">
+                </div>
+                <!-- Photo 4 -->
+                <div class="photo-card rounded-xl overflow-hidden shadow-lg">
+                    <img src="WhatsApp Image 2025-06-03 at 23.24.08.jpeg" alt="Couple photo 4" class="w-full h-40 object-cover">
+                </div>
+                <!-- Photo 5 -->
+                <div class="photo-card rounded-xl overflow-hidden shadow-lg">
+                    <img src="WhatsApp Image 2025-06-03 at 23.24.07.jpeg" alt="Couple photo 5" class="w-full h-40 object-cover">
+                </div>
+                <!-- Photo 6 -->
+                <div class="photo-card rounded-xl overflow-hidden shadow-lg">
+                    <img src="WhatsApp Image 2025-06-03 at 23.24.06.jpeg" alt="Couple photo 6" class="w-full h-40 object-cover">
+                </div>
+                <!-- Photo 7 -->
+                <div class="photo-card rounded-xl overflow-hidden shadow-lg">
+                    <img src="WhatsApp Image 2025-06-03 at 23.24.05.jpeg" alt="Couple photo 7" class="w-full h-40 object-cover">
+                </div>
+                <!-- Photo 8 -->
+                <div class="photo-card rounded-xl overflow-hidden shadow-lg">
+                    <img src="WhatsApp Image 2025-06-03 at 23.24.03 (1).jpeg" alt="Couple photo 8" class="w-full h-40 object-cover">
+                </div>
+                <!-- Photo 9 -->
+                <div class="photo-card rounded-xl overflow-hidden shadow-lg">
+                    <img src="WhatsApp Image 2025-06-03 at 23.24.01.jpeg" alt="Couple photo 9" class="w-full h-40 object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- Love Notes -->
+        <section class="bg-white bg-opacity-20 rounded-xl p-6 backdrop-blur-sm shadow-lg">
+            <h3 class="dancing-script text-2xl font-bold mb-4 text-center">Coisas Que Eu Amo em Você</h3>
+            <div class="space-y-4">
+                <div class="bg-white bg-opacity-30 p-4 rounded-lg">
+                    <p>✨ Seu sorriso que ilumina meus dias como o sol mais radiante</p>
+                </div>
+                <div class="bg-white bg-opacity-30 p-4 rounded-lg">
+                    <p>❤️ Seu coração generoso que me acolhe com amor incondicional</p>
+                </div>
+                <div class="bg-white bg-opacity-30 p-4 rounded-lg">
+                    <p>😊 Seu jeito único de transformar meus dias difíceis em razões para sorrir</p>
+                </div>
+                <div class="bg-white bg-opacity-30 p-4 rounded-lg">
+                    <p>🌟 Sua luz que guia meus passos mesmo nas noites mais escuras</p>
+                </div>
+                <div class="bg-white bg-opacity-30 p-4 rounded-lg">
+                    <p>🌹 Seu abraço que me faz sentir em casa em qualquer lugar do mundo</p>
+                </div>
+                <div class="bg-white bg-opacity-30 p-4 rounded-lg">
+                    <p>💫 Seu olhar que me enche de paz e ao mesmo tempo acelera meu coração</p>
+                </div>
+                <div class="bg-white bg-opacity-30 p-4 rounded-lg">
+                    <p>🌙 Sua voz que é a melodia mais perfeita que já ouvi na vida</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hidden Surprise Modal -->
+        <div id="surpriseModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+            <div class="bg-white bg-opacity-20 rounded-xl p-8 mx-4 backdrop-blur-sm shadow-2xl max-w-sm relative overflow-visible">
+                <button id="closeModal" class="absolute top-4 right-4 text-white hover:text-pink-300 bg-black bg-opacity-50 rounded-full p-2 transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                <div class="text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-red-500 mb-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+                    </svg>
+                    <h3 class="dancing-script text-3xl font-bold mb-4">Eu te amo!</h3>
+                    <p class="mb-6">Você é a pessoa mais incrível que já conheci. Minha vida só começou a fazer sentido verdadeiro no dia em que te encontrei. Cada momento ao seu lado é um presente que guardo com todo cuidado no meu coração. Prometo te amar e cuidar de você todos os dias da minha vida, porque você é meu maior tesouro, minha alegria, meu tudo.</p>
+                    <p class="mb-6">Se eu pudesse escolher todas as vidas possíveis, em todas elas eu escolheria você. Você é simplesmente perfeita do seu jeito único, e eu nunca vou cansar de dizer o quanto te amo.</p>
+                    <div id="flowerAnimation" class="h-32 relative hidden">
+                        <!-- Flowers will be added here by JavaScript -->
+                    </div>
+                    <button id="flowerBtn" class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-full transition-all transform hover:scale-105 mt-4">
+                        ❤️ Flores para a mulher da minha vida! ❤️
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set your anniversary date here (YYYY, MM-1, DD)
+        const anniversaryDate = new Date(2023, 6, 13); // July 13, 2023 (JS months are 0-indexed)
+        
+        function updateCountdown() {
+            const now = new Date();
+            const diff = now - anniversaryDate;
+            
+            const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+            const months = Math.floor((diff % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30));
+            const days = Math.floor((diff % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            
+            document.getElementById('years').textContent = years;
+            document.getElementById('months').textContent = months;
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+        }
+        
+        // Initial call and set interval
+        updateCountdown();
+        setInterval(updateCountdown, 3600000); // Update every hour
+        // Create falling hearts and flowers
+        function createFallingElements() {
+            const types = ['heart', 'flower'];
+            const colors = ['#ff6b8b', '#ff8e9e', '#ffb8b8', '#ffdddd', '#f9a9bc'];
+            
+            setInterval(() => {
+                const type = types[Math.floor(Math.random() * types.length)];
+                const element = document.createElement('div');
+                element.className = `falling-${type}`;
+                
+                // Random properties
+                const size = Math.random() * 20 + 10;
+                const left = Math.random() * 100;
+                const duration = Math.random() * 10 + 10;
+                const delay = Math.random() * 5;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                
+                element.style.left = `${left}%`;
+                element.style.width = `${size}px`;
+                element.style.height = `${size}px`;
+                element.style.animationDuration = `${duration}s`;
+                element.style.animationDelay = `${delay}s`;
+                element.style.color = color;
+                
+                if (type === 'heart') {
+                    element.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+                        </svg>
+                    `;
+                } else {
+                    element.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.598 7h5.152a.989.989 0 01-.018-.021l-1.735-1.723a2.24 2.24 0 01-.141-.175 1 1 0 00-.286-.31.75.75 0 00.5-.188l2.206-2.204a2.25 2.25 0 013.182 0l2.206 2.204a.75.75 0 00.5.188 1 1 0 00-.286-.31 2.24 2.24 0 01-.141-.174l1.732-1.72.001-.003a1 1 0 00-.3-1.646 2.25 2.25 0 00-3.182 0l-2.206 2.204a.75.75 0 00-.493.188zM12.932 7l.765-.755-.003-.001a.75.75 0 00-.493-.188l-2.204 2.205a2.25 2.25 0 00-3.182 0L4.89 6.997a.75.75 0 00-.493.188 1 1 0 00-.287.31c-.12.161-.178.307-.24.448a31.26 31.26 0 012.05-.172 10.95 10.95 0 01.5.01c.075.002.15.005.225.008.2.008.382.017.554.026l.062.002c.232.01.436.018.612.024l.046.001c.185.006.332.01.438.011h.756z" clip-rule="evenodd" />
+                        </svg>
+                    `;
+                }
+                
+                document.body.appendChild(element);
+                
+                // Remove element after animation completes
+                setTimeout(() => {
+                    element.remove();
+                }, (duration + delay) * 1000);
+            }, 500);
+        }
+        
+        // Start the falling elements when page loads
+        window.addEventListener('load', createFallingElements);
+        
+        // Surprise button functionality
+        document.getElementById('surpriseBtn').addEventListener('click', function() {
+            document.getElementById('surpriseModal').classList.remove('hidden');
+        });
+        
+        document.getElementById('closeModal').addEventListener('click', function() {
+            document.getElementById('surpriseModal').classList.add('hidden');
+        });
+        // Close modal when clicking outside content
+        document.getElementById('surpriseModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.add('hidden');
+            }
+        });
+        
+        // Flower button functionality
+        document.getElementById('flowerBtn').addEventListener('click', function() {
+            const flowerContainer = document.getElementById('flowerAnimation');
+            flowerContainer.classList.remove('hidden');
+            flowerContainer.innerHTML = '';
+            
+            // Create falling flowers
+            for (let i = 0; i < 15; i++) {
+                createFlower(flowerContainer);
+            }
+        });
+        
+        function createFlower(container) {
+            const flower = document.createElement('div');
+            flower.className = 'absolute top-0 flower';
+            flower.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.598 7h5.152a.989.989 0 01-.018-.021l-1.735-1.723a2.24 2.24 0 01-.141-.175 1 1 0 00-.286-.31.75.75 0 00.5-.188l2.206-2.204a2.25 2.25 0 013.182 0l2.206 2.204a.75.75 0 00.5.188 1 1 0 00-.286-.31 2.24 2.24 0 01-.141-.174l1.732-1.72.001-.003a1 1 0 00-.3-1.646 2.25 2.25 0 00-3.182 0l-2.206 2.204a.75.75 0 00-.493.188zM12.932 7l.765-.755-.003-.001a.75.75 0 00-.493-.188l-2.204 2.205a2.25 2.25 0 00-3.182 0L4.89 6.997a.75.75 0 00-.493.188 1 1 0 00-.287.31c-.12.161-.178.307-.24.448a31.26 31.26 0 012.05-.172 10.95 10.95 0 01.5.01c.075.002.15.005.225.008.2.008.382.017.554.026l.062.002c.232.01.436.018.612.024l.046.001c.185.006.332.01.438.011h.756z" clip-rule="evenodd" />
+                </svg>
+            `;
+            
+            // Random position and animation
+            const startPos = Math.random() * 100;
+            const duration = 3 + Math.random() * 3;
+            const delay = Math.random() * 2;
+            
+            flower.style.left = `${startPos}%`;
+            flower.style.animation = `fall ${duration}s linear ${delay}s forwards`;
+            
+            // Add animation via style
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes fall {
+                    to {
+                        transform: translateY(120px) rotate(360deg);
+                        opacity: 0;
+                    }
+                }
+                .flower {
+                    opacity: 1;
+                }
+            `;
+            document.head.appendChild(style);
+            
+            container.appendChild(flower);
+            
+            // Remove flower after animation
+            setTimeout(() => {
+                flower.remove();
+            }, (duration + delay) * 1000);
+        }
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=skull21/my-love" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
